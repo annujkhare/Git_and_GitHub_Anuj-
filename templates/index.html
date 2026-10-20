@@ -1,86 +1,96 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My To-Do List</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #f4f4f4;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f4f4f4;
+      }
 
-        h1 {
-            text-align: center;
-        }
+      h1 {
+        text-align: center;
+      }
 
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-        }
+      form {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+      }
 
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+      }
 
-        input, textarea, button {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-        }
+      input,
+      textarea,
+      button {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+      }
 
-        textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
+      textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
 
-        button {
-            margin-top: 20px;
-            background: #1769aa;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+      button {
+        margin-top: 20px;
+        background: #1769aa;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
 
-        button:hover {
-            background: #104c7d;
-        }
+      button:hover {
+        background: #104c7d;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>My To-Do List</h1>
     <p>Add a new task using the form below.</p>
 
     <form action="/submittodoitem" method="POST">
-        <label for="itemName">Item Name</label>
-        <input
-            type="text"
-            id="itemName"
-            name="itemName"
-            placeholder="Enter item name"
-            required
-        >
+      <label for="itemId">Item ID</label>
+      <input
+        type="number"
+        id="itemId"
+        name="itemId"
+        placeholder="Enter item ID"
+        required
+      />
 
-        <label for="itemDescription">Item Description</label>
-        <textarea
-            id="itemDescription"
-            name="itemDescription"
-            placeholder="Describe your task"
-            required
-        ></textarea>
+      <label for="itemName">Item Name</label>
+      <input
+        type="text"
+        id="itemName"
+        name="itemName"
+        placeholder="Enter item name"
+        required
+      />
 
-        <button type="submit">Add To-Do Item</button>
+      <label for="itemDescription">Item Description</label>
+      <textarea
+        id="itemDescription"
+        name="itemDescription"
+        placeholder="Describe your task"
+        required
+      ></textarea>
+
+      <button type="submit">Add To-Do Item</button>
     </form>
-</body>
+  </body>
 </html>
