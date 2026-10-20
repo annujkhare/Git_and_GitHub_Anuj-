@@ -4,30 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git and GitHub Assignment</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
+    <title>My To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            background: #1769aa;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #104c7d;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>My Flask Project</h1>
-    <p>Welcome to my Git and GitHub DevOps assignment.</p>
-    <p>My application is running successfully.</p>
+    <h1>My To-Do List</h1>
+    <p>Add a new task using the form below.</p>
 
-    <form action="/submit" method="POST">
-        <label>Name</label>
-        <input type="text" name="name" placeholder="Enter your name" />
+    <form action="/submittodoitem" method="POST">
+        <label for="itemName">Item Name</label>
+        <input
+            type="text"
+            id="itemName"
+            name="itemName"
+            placeholder="Enter item name"
+            required
+        >
 
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Enter your email" />
+        <label for="itemDescription">Item Description</label>
+        <textarea
+            id="itemDescription"
+            name="itemDescription"
+            placeholder="Describe your task"
+            required
+        ></textarea>
 
-        <label>Message</label>
-        <textarea name="message" placeholder="Enter your message"></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
-
-    <a href="/api"></a>
+        <button type="submit">Add To-Do Item</button>
+    </form>
 </body>
 </html>
