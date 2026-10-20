@@ -12,13 +12,13 @@ def home():
 @app.route("/api")
 def api():
     response = {
-        "message": "Welcome to the Git and GitHub assignment",
-        "name": "Flask API",
-        "status": "success"
+        "message": "Updated JSON from AnujKhare_new branch",
+        "name": "Git and GitHub DevOps Assignment",
+        "status": "success",
+        "version": 2
     }
 
     return jsonify(response)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
